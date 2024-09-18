@@ -3,9 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>JS DOM ELEMENT</title>
 </head>
 <body>
-    
+    <h1 onclick="console.log('I am sorry hello')">Ajker Dom Element</h1>
+    <button onclick="console.log(7)">click me</button>
+    <button onclick="console.log(65)">Another button</button>
+    <button onclick="document.body.style.backgroundColor='yellow'">make yellow</button>
+    <button onclick="make_red()">make red</button>
+    <button id="make-blue">make blue</button>
+    <script src="js/element.js"></script>
+    <script>
+
+        const makeBlue=document.getElementById('make-blue');
+        makeBlue.onclick=make_blue;
+
+        function make_blue()
+        {
+            document.body.style.backgroundColor='blue';
+        }
+        // function make_red()
+        // {
+        //     document.body.style.backgroundColor='red';
+        // }
+    </script>
 </body>
 </html>
