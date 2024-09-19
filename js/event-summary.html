@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Summery</title>
+</head>
+<body>
+    <h1>Final dom event handeler</h1>
+    <h3 id="event-handler">Inner text</h3>
+
+    <p id="input-text-display">Default input text</p>
+    <input id="input-field" type="text">
+    <button id="btn-update">updated</button>
+    <button onclick="OnClickHandler()"> Handle Event by adding one click funtion</button>
+    <button id="event-listener">Handle by event listener</button>
+
+
+
+    <script>
+       function OnClickHandler()
+       {
+        const OneClickStatus=document.getElementById('event-handler');
+        OneClickStatus.innerText='Handle by function onclick attribute';
+       }
+
+
+    //    option 2:
+
+    document.getElementById('event-listener').addEventListener('click',function()
+{
+    const eventHandleStatus=document.getElementById('event-handler');
+    eventHandleStatus.innerText='Text updated by add event listener method';
+})
+
+  //recap:
+
+  document.getElementById('btn-update').addEventListener('click',function()
+{
+    const inputField=document.getElementById('input-field')
+    const inputText=inputField.value;
+
+     const p=document.getElementById('input-text-display')
+     p.innerText=inputText;
+     inputField.value='';
+
+})
+    </script>
+</body>
+</html>
